@@ -11,6 +11,10 @@ li.done>p{
     text-decoration: line-through;
 }
 
-#button-remove{
-    cursor: pointer;
+.button-remove{
+    cursor: pointer !important;
+}
+
+#remove {
+    display: none !important;
 }

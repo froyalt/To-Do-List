@@ -16,6 +16,7 @@ import "./style.css"
 interface Task {
   title: string;
   done: boolean;
+  remove: boolean;
 }
 
 
@@ -30,6 +31,7 @@ export default function Box() {
       {
       title: taskTitle,
       done: false,
+      remove: false,
       },
     ]);
     // reseting the input to empty string
@@ -42,6 +44,12 @@ export default function Box() {
     newList[position].done = true;
 
     setTask(newList);
+  }
+
+  function removeTask(position: number){
+    const newList = [...task];
+    newList[position].remove = true;
+    setTask(newList)
   }
 
 
@@ -73,7 +81,7 @@ export default function Box() {
 
             {task.map((tasks: Task, position: number) => {
                 return(
-                  <TaskItem title={tasks.title} done={tasks.done} finishTask={ () => finishTask(position) } />
+                  <TaskItem title={tasks.title} done={tasks.done} finishTask={ () => finishTask(position) } remove={tasks.remove} removeTask={ () => removeTask(position) } />
                 )
               })
             }
