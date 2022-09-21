@@ -23,15 +23,17 @@ export default function Box() {
   
   const [task, setTask] = useState<Task[]>([]);
 
-
+  const [taskTitle, setTaskTitle] = useState<string>("")
 
   function addTask(){
     setTask([...task, 
       {
-      title: "tarefa 2",
+      title: taskTitle,
       done: false,
       },
     ]);
+    // reseting the input to empty string
+    setTaskTitle("")
   }
 
   function finishTask(position: number){
@@ -43,7 +45,6 @@ export default function Box() {
   }
 
 
-
   return (
     // add fluid? 
     <>
@@ -52,7 +53,7 @@ export default function Box() {
         <Col className='text-center my-2'><h2>To Do List</h2></Col>
       </Row>
       <Row>
-        <Col className='col-12 col-lg-9 '><FormToDo /></Col>
+        <Col className='col-12 col-lg-9 '><FormToDo value={taskTitle} onChange={(event) => setTaskTitle(event.target.value) } /></Col>
         <Col className=' m-auto mb-3 col-12 col-sm-6 col-lg-3'><Form.Group>
                     <Form.Control
                       className="btn btn-primary text-center"
