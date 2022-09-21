@@ -1,0 +1,16 @@
+li>span{
+    cursor: pointer;
+}
+
+li.done>span{
+    cursor: not-allowed;
+}
+
+li.done>p{
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+#button-remove{
+    cursor: pointer;
+}

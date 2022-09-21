@@ -1,0 +1,13 @@
+#view-width{
+    width: 35vw;
+}
+
+::placeholder{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px){
+    #asd{
+        width: 60vw;
+    }
+}
