@@ -19,7 +19,7 @@ export default function TaskItem(props: TaskItemProps) {
       <span className="button-remove" onClick={props.removeTask}>
         ❌
       </span>
-      <p>{props.title}</p>
+      <p className="text-break">{props.title}</p>
       <span onClick={props.finishTask}>✅</span>
     </li>
   );
