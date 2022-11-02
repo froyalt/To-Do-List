@@ -1,5 +1,5 @@
 # To-Do-List
-A To Do List created using React.TS and Bootstrap
+Uma To Do List simples criada com React.TS e Bootstrap
 
 ## 🚀 Para executar basta:
 
