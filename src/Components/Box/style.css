@@ -7,7 +7,13 @@
 }
 
 @media only screen and (max-width: 1000px){
-    #asd{
+    #view-width{
         width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #view-width{
+        width: 90vw;
     }
 }
